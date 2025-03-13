@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HelpingHands</title>
+  <link rel="icon" href="HelpingHands.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <section id="navigationbar">
+    <nav class="navbar">
+      <!-- Logo Dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn" id="dropdown-toggle" onclick="window.location.href='index.html';">
+          <img src="HelpingHands.png" alt="Logo" class="logo" />
+        </button>
+        <div class="dropdown-content" id="dropdown-menu">
+          <a href="Profile.html">Profile</a>
+          <a href="Settings.html">Settings</a>
+          <button id="dark-mode-toggle">Dark Mode</button>
+          <button id="logout">Logout</button>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="nav-links">
+        <a href="translate.html">Translate</a>
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Login">Login</a>
+        <a href="#Reviews">Reviews</a>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Home Section -->
+  <section id="Home">
+    <!-- Text Container -->
+    <div>
+      <h1>Lorem ipsum dolor sit amet.</h1>
+      <p class="indented">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Earum iste quod eaque laudantium quis sed porro rerum assumenda
+        at atque incidunt, blanditiis ad mollitia, quaerat dolorem explicabo
+        delectus reprehenderit expedita quae, eius corporis magni nisi consectetur.
+      </p>
+      <!-- Centered Button linking to translate.html -->
+      <a href="Translate.html" class="translate-btn">START TRANSLATING</a>
+    </div>
+
+    <!-- Image Container -->
+    <div>
+      <img src="HomeImg.png" alt="Homepage Cover" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="About">
+    <h1>About Us:</h1>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+  </section>
+
+  <section id="Login"></section>
+  <section id="Reviews"></section>
+
+  <!-- Your JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

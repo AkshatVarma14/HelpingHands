@@ -1,0 +1,228 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth transitions */
+body, .navbar, .dropdown-content, .nav-links a {
+    transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Light Mode */
+body {
+    background: #F5F5F5;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    width: 100%;
+    padding: 15px 20px;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFF;
+    color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 60px;
+}
+
+/* Home section should start after navbar */
+#Home {
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center the divs */
+    height: 80vh; /* Adjust height to maintain proper alignment */
+}
+
+/* Styling for both divs inside Home */
+#Home div {
+    width: 45%; /* Adjusted for responsiveness */
+    padding: 20px;
+}
+
+/* First div aligned left with more distance */
+#Home div:first-child {
+    margin-left: 5vw; /* Increased left margin */
+}
+
+/* Second div aligned right with more distance */
+#Home div:last-child {
+    margin-right: 5vw; /* Increased right margin */
+    text-align: right;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Logo */
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #FFF;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Show dropdown */
+.dropdown:hover .dropdown-content,
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+/* Dropdown items */
+.dropdown-content a, .dropdown-content button {
+    color: #333;
+    padding: 12px 15px;
+    display: block;
+    text-decoration: none;
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover, .dropdown-content button:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #181818;
+    color: #E0E0E0;
+}
+
+.dark-mode .navbar {
+    background: #222;
+    color: #E0E0E0;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .nav-links a {
+    color: #E0E0E0;
+}
+
+.dark-mode .dropdown-content {
+    background: #222;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .dropdown-content a, .dark-mode .dropdown-content button {
+    color: #E0E0E0;
+}
+
+.dark-mode .dropdown-content a:hover, .dark-mode .dropdown-content button:hover {
+    background: #333;
+}
+
+.indented {
+    margin-left: 20px;
+}
+
+/* About Section */
+#About {
+    background-color: rgb(136, 116, 116);
+    position: relative; /* Ensures absolute-positioned children stay inside */
+    min-height: 100vh; /* Ensures space for boxes */
+    padding: 20px; /* Ensures spacing */
+}
+.header{
+    width:80%;
+    text-align:center;
+    padding-top:10px;
+    position:relative;
+    font-size: large;
+    left:10%;
+}
+/* Boxes inside About */
+.box {
+    width: 19.5%;
+    height: 49.5%;
+    background-color: rgb(217, 217, 217);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
+
+/* Positioning the boxes with slight tilt */
+.box1 { top: 20%; left: 5%; overflow: auto; }
+.box2 { top: 40%; left: 28.75%; overflow:auto;}
+.box3 { top: 20%; right: 28.75%;overflow: auto; }
+.box4 { top: 40%; right: 5%;overflow: auto; }
+
+/* Ensure responsiveness for small screens */
+@media (max-width: 768px) {
+    #Home {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #Home div {
+        width: 80%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    #Home div:first-child,
+    #Home div:last-child {
+        margin: 0 auto;
+    }
+
+    /* Stack boxes vertically for small screens */
+    .box {
+        position: static;
+        width: 80%;
+        height: auto;
+        margin: 10px auto;
+    }
+}
